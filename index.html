@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Webrary</h1>
+      <label for="sort">
+        <select class="sort" id="sort" name="sort">
+          <option value="title_a-z">Title A-Z</option>
+          <option value="title_z-a">Title Z-A</option>
+          <option value="author_a-z">Author A-Z</option>
+          <option value="author_z-a">Author Z-A</option>
+          <option value="genre">Genre</option>
+        </select>
+      </label>
+      <label for="genre">
+        <select class="genre" id="genre" name="genre">
+          <option value="default">--</option>
+          <option value="fiction">Fiction</option>
+          <option value="non-fiction">Non-Fiction</option>
+        </select>
+      </label>
+      <label for="search">
+        <input type="search" id="search" name="search"></input>
+      </label>
+      <div class="account">
+        <span>Acount Icon</span>
+      </div>
+    </div>
+    <div class="library">
+      <div class="cards">
+        <div class="card">
+          <h2>Title</h2>
+          <p class="author">Author Name</p>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, atque!</p>
+        </div>
+      </div>
+    </div>
+    <button class="add material-symbols-outlined">add</button>
+  </body>
+</html>
