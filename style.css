@@ -4,10 +4,11 @@
 }
 
 :root {
-  --primary: #6a8390;
+  --primary: #5b8aa3;
   --secondary: #d7d8e1;
+  --tertiary: #f7f7ff;
   --accent: #658783;
-  --background: #e9e4e2;
+  --background: #ece7e5;
   --text: #060504;
   --heading-font: "Josefin Sans", sans-serif;
   --body-font: "Poppins", sans-serif;
@@ -38,8 +39,9 @@ h1 {
 
 h2 {
   font-family: var(--heading-font);
-  font-size: 32px;
+  font-size: 24px;
 }
+
 .header {
   padding: 20px;
   display: grid;
@@ -49,13 +51,18 @@ h2 {
   background-color: var(--background);
 }
 
+.account {
+  color: var(--primary);
+}
+
 .library {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 100px;
+  gap: 20px;
   background-color: var(--secondary);
   padding: 20px;
-  box-shadow: inset 0px 5px 20px #00000056;
+  box-shadow: inset 0px 5px 20px #0000001b;
 }
 
 .card {
@@ -63,9 +70,10 @@ h2 {
   border: var(--primary) 5px solid;
   border-radius: 15px;
   padding: 10px;
-  min-height: 200px;
-  display: grid;
-  grid-template-rows: 32px 1fr;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px #0000001f;
+  overflow: hidden;
 }
 
 .author {
@@ -73,13 +81,9 @@ h2 {
   font-size: 18px;
 }
 
-.description {
-  font-size: 12px;
-}
-
 button.add {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   padding: 20px;
   position: absolute;
   bottom: 5%;
@@ -91,16 +95,64 @@ button.add {
   border-radius: 50%;
   transition: 0.5s;
   box-shadow: 0 0 10px #00000056;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button.add::first-line {
-  color: red;
+button > span.material-symbols-outlined {
+  margin: -5px;
+  color: var(--secondary);
   overflow: hidden;
-  position: fixed;
-  height: 20px;
-  width: 20px;
+  position: absolute;
+  font-size: 40px;
 }
 
 button.add:hover {
   transform: scale(110%);
+}
+
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: var(--background);
+  border: var(--accent) 3px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 0 20px #0000001b;
+}
+
+input,
+select {
+  background-color: var(--tertiary);
+  border: var(--accent) 2px solid;
+  border-radius: 10px;
+  color: var(--text);
+  padding: 5px;
+  font-family: var(--body-font);
+}
+
+.add-book {
+  padding: 20px;
+  background-color: var(--accent);
+  color: var(--tertiary);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--heading-font);
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.add-book:hover {
+  transform: scale(102%);
+  background-color: var(--primary);
+}
+
+*:focus {
+  border-color: var(--primary);
 }

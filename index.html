@@ -28,27 +28,34 @@
       </label>
       <label for="genre">
         <select class="genre" id="genre" name="genre">
-          <option value="default">--</option>
+          <option value="default">-Genre-</option>
           <option value="fiction">Fiction</option>
           <option value="non-fiction">Non-Fiction</option>
         </select>
       </label>
       <label for="search">
-        <input type="search" id="search" name="search"></input>
+        <input type="search" id="search" name="search" placeholder="Search..."></input>
       </label>
       <div class="account">
-        <span>Acount Icon</span>
+        <span class="material-symbols-outlined">account_circle</span>
       </div>
     </div>
     <div class="library">
-      <div class="cards">
         <div class="card">
-          <h2>Title</h2>
-          <p class="author">Author Name</p>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, atque!</p>
+          <h2>Game of Thrones</h2>
+          <p class="author">George R.R. Martin</p>
+          <p class="read"><span class="material-symbols-outlined">cancel</span></p>
         </div>
-      </div>
+        <div class="card">
+          <h2>Game of Thrones</h2>
+          <p class="author">George R.R. Martin</p>
+        </div>
     </div>
-    <button class="add material-symbols-outlined">add</button>
+    <button class="add" id="add"><span class="material-symbols-outlined">add</span></button>
+    <dialog id="modal">
+      <input type="text" placeholder="Title"><input type="text" placeholder="Author">
+      <label for="read-status">Have you read this book? <input type="checkbox"></label>
+      <button class="add-book">Add Book</button>
+    </dialog>
   </body>
 </html>
