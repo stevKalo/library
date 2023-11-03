@@ -113,8 +113,6 @@ button.add:hover {
 }
 
 dialog {
-  display: none;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -122,10 +120,13 @@ dialog {
   background-color: var(--background);
   border: var(--accent) 3px solid;
   border-radius: 10px;
+  box-shadow: 0 0 20px #0000001b;
+}
+
+.modal-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 0 0 20px #0000001b;
 }
 
 input,
