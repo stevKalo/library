@@ -46,7 +46,7 @@ h2 {
   padding: 20px;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, 1fr);
   align-items: center;
   background-color: var(--background);
 }
@@ -113,6 +113,7 @@ button.add:hover {
 }
 
 dialog {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -137,7 +138,7 @@ select {
   font-family: var(--body-font);
 }
 
-.add-book {
+.modal-add {
   padding: 20px;
   background-color: var(--accent);
   color: var(--tertiary);
@@ -148,11 +149,7 @@ select {
   transition: 0.5s;
 }
 
-.add-book:hover {
+.modal-add:hover {
   transform: scale(102%);
   background-color: var(--primary);
-}
-
-*:focus {
-  border-color: var(--primary);
 }
