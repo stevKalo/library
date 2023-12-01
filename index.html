@@ -17,8 +17,6 @@
   <body>
     <div class="header">
       <h1 class="title">Webrary</h1>
-      <label for="sort">
-      </label>
       <label for="search" class="material-symbols-outlined">search
         <input type="search" id="search" name="search" placeholder="Search..."></input>
       </label>
@@ -27,10 +25,9 @@
       </div>
     </div>
     <div class="library">
-        <div class="card" id="card1">
+        <div class="card unread" id="card1">
           <h2>Game of Thrones</h2>
           <p class="author">George R.R. Martin</p>
-          <p class="read material-symbols-outlined">cancel</p>
         </div>
         <div class="card" id="card2">
           <h2>Game of Thrones</h2>
@@ -40,9 +37,9 @@
     <button class="add" id="add"><span class="material-symbols-outlined">add</span></button>
     <dialog id="modal">
       <div class="modal-container">
-        <input type="text" placeholder="Title" class="modal-title">
-        <input type="text" placeholder="Author" class="modal-author">
-        <label for="modal-read">Have you read this book? <input type="checkbox" name="modal-read" class="modal-read"></label>
+        <input type="text" placeholder="Title" class="modal-title" id="modal-title">
+        <input type="text" placeholder="Author" class="modal-author" id="modal-author">
+        <label for="modal-status">Have you read this book? <input type="checkbox" name="modal-status" class="modal-status" id="modal-status"></label>
         <button class="modal-add">Add Book</button>
       </div>
     </dialog>

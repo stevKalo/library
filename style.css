@@ -8,6 +8,7 @@
   --secondary: #d7d8e1;
   --tertiary: #f7f7ff;
   --accent: #658783;
+  --unread: rgb(201, 91, 91);
   --background: #ece7e5;
   --text: #060504;
   --heading-font: "Josefin Sans", sans-serif;
@@ -46,7 +47,7 @@ h2 {
   padding: 20px;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   background-color: var(--background);
 }
@@ -74,6 +75,10 @@ h2 {
   flex-direction: column;
   box-shadow: 0 0 10px #0000001f;
   overflow: hidden;
+}
+
+.unread {
+  border: var(--unread) 5px solid;
 }
 
 .author {
